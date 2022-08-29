@@ -12,8 +12,7 @@ namespace CodeHelper.API.NYTimes.Articles
         [Placeholder("{SECTION}")] public string Section { get; set; } = "";
         [Placeholder("{RESOURCETYPE}")] public string ResourceType { get; set; } = "";
         [Placeholder("{SHAREDTYPE}")] public string SharedType { get; set; } = "";
-        [Placeholder("{PERIOD}")] public int Period { get; set; } = 1;
-        [Placeholder("{QUERY}")] public string SearchQuery { get; set; } = "";
+        [Placeholder("{PERIOD}")] public int Period { get; set; } = 1;        
         [Placeholder("{FILTER}")] public string SearchFilter { get; set; } = "";
 
         [Placeholder("{YEAR}")] public int SeachYear { get; set; }
