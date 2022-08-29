@@ -1,14 +1,14 @@
-﻿# CodeHelper.API.Fixer
+﻿# CodeHelper.API.NYTimes
 CodeHelper.API.NYTimes is a lightweight and simple .NET Wrapper to get links and metadata for Times' articles as soon as they are published on NYTimes.com. The Times Newswire API provides an up-to-the-minute stream of published articles. You can filter results by source (all, nyt, inyt) and section (arts, business, ...).
 
 ## Question?
-NYTimes API: <https://developer.nytimes.com/apis>
-Frederik van Lierde <https://twitter.com/@frederik_vl/>
-GitHub <https://github.com/frederikvanlierde/CodeHelper.API.NYTimes>
-NuGet <https://www.nuget.org/packages/CodeHelper.API.NYTimes>
+* NYTimes API: <https://developer.nytimes.com/apis>
+* Frederik van Lierde <https://twitter.com/@frederik_vl/>
+* GitHub <https://github.com/frederikvanlierde/CodeHelper.API.NYTimes>
+* NuGet <https://www.nuget.org/packages/CodeHelper.API.NYTimes>
 
 ## Version
-1.0.0 : Get Sections, Get Articles
+* 1.0.0 : Get Sections, Get Articles
 
 ## Methods
 * NYTimesHelper.GetSections() :  Returns the available sections, like Arts, Business,...
