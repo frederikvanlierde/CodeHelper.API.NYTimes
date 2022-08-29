@@ -19,13 +19,13 @@ CodeHelper.API.NYTimes is a lightweight and simple .NET Wrapper to get links and
 * NYTimesHelper.GetArticleArchive(int year, int month) : Returns an array of NYT articles for a given month, going back to 1851.
 
 ## Use of Code
-´´´C#
+ ```csharp
 using CodeHelper.API.NYTimes;
 using CodeHelper.API.NYTimes.Articles;
 
 NYTimesHelper _helper = new() { ApiKey = "YOUR_NYTIMES_API_TOKEN"" };
 var _articles = _helper.GetTopStories("arts");
-´´´
+```
 
 ## Authentication
 NY Times API uses API key to authenticate requests. You can view and manage your API keys in the My Apps page <https://developer.nytimes.com/my-apps>
