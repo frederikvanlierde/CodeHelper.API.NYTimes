@@ -1,34 +1,21 @@
 ﻿# CodeHelper.API.Fixer
-Fixer is a lightweight and simple API for historical and current foreign exchange rates. It is used by many SMBs, large corporations, and developers every day due to its reliable data sources for real-time exchange rates.
-For more information and a list of endpoints available, please see the detailed documentation pages below.
+CodeHelper.API.NYTimes is a lightweight and simple .NET Wrapper to get links and metadata for Times' articles as soon as they are published on NYTimes.com. The Times Newswire API provides an up-to-the-minute stream of published articles. You can filter results by source (all, nyt, inyt) and section (arts, business, ...).
 
 ## Question?
-Fixer API: <https://apilayer.com/marketplace/fixer-api>
+NYTimes API: <https://developer.nytimes.com/apis>
 Frederik van Lierde <https://twitter.com/@frederik_vl/>
-GitHub <https://github.com/frederikvanlierde/CodeHelper.API.Fixer>
-NuGet <https://www.nuget.org/packages/CodeHelper.API.Fixer>
+GitHub <https://github.com/frederikvanlierde/CodeHelper.API.NYTimes>
+NuGet <https://www.nuget.org/packages/CodeHelper.API.NYTimes>
 
 ## Version
-1.1.0 : Fluctuations, TimeSeries, Get Historical Rates
-1.0.0 : Get Symbols, Convert Amounts, Get Latest Exchange Rate Data
+1.0.0 : Get Sections, Get Articles
 
 ## Methods
-* FixerHelper.GetSymbols() : Returning all available currencies.
-* FixerHelper.Convert(string from, string to, double amount=1) : Returns the conversion value for the given amount
-* FixerHelper.LatestExchangeRates(string baseCurrency, string symbols) : Returns real-time exchange rate data updated every 60 minutes, every 10 minutes or every 60 seconds.
-* FixerHelper.GetHistoricalRates(string date, string baseCurrency = "", string symbols = "") : Query for historical rates for a given date.
-* FixerHelper.TimeSeries(string startDate, string endDate, string baseCurrency = "", string symbols="") : Query for daily historical rates between two dates of your choice.
-* FixerHelper.Fluctuation(string startDate, string endDate, string baseCurrency = "") : Returns fluctuation data between two specified dates for all available or a specific set of currencies.
+* NYTimesHelper.GetSections() :  Returns the available sections, like Arts, Business,...
+* NYTimesHelper.GetArticles(string source = SourceTypes.All, string section = "all") : Get links and metadata for NY Times' articles as soon as they are published on NYTimes.com.
 
 ## Authentication
-Fixer API uses API keys to authenticate requests. You can view and manage your API keys in the Accounts page.
-
-Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.
-
-All requests made to the API must hold a custom HTTP header named "apikey". Implementation differs with each programming language. Below are some samples.
-
-All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+NY Times API uses API key to authenticate requests. You can view and manage your API keys in the My Apps page <https://developer.nytimes.com/my-apps>
 
 ## Usage
-* Free Plan: 100 Requests / Daily
-* Paid plans available: <https://apilayer.com/marketplace/fixer-api#pricing>
+* Free Plan
