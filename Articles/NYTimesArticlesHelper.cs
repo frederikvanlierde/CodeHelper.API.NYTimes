@@ -1,11 +1,10 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
 using CodeHelper.Core.PlaceHolder;
 namespace CodeHelper.API.NYTimes.Articles
 {
-    internal class NYTimesArticlesHelper : NYTimesHelper
+    public class NYTimesArticlesHelper : NYTimesHelper
     {
         #region Properties               
         [Placeholder("{SOURCE}")] public string Source { get; set; } = "";
@@ -73,6 +72,7 @@ namespace CodeHelper.API.NYTimes.Articles
         /// <returns>List<Article> : List of available Articles</returns>
         public async Task<List<Article>> GetTopStories(string section = "home")
         {
+            this.Section = section.ToLower();
             return (JsonSerializer.Deserialize<ResultArticles>(await GetJson(Constants.API_URL_ARTICLES_TOPSTORIES)) ?? new()).Articles;
         }
 
