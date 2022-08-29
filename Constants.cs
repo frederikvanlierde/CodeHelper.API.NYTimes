@@ -9,6 +9,10 @@
         public const string API_URL_ARTICLES_MOSTPOPULAR = "https://api.nytimes.com/svc/mostpopular/v2/{RESOURCETYPE}/{PERIOD}/{SHAREDTYPE}.json?api-key={APIKEY}";
         public const string API_URL_ARTICLES_SEARCH = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q={QUERY}&fq={FILTER}&api-key={APIKEY}";
         public const string API_URL_ARTICLES_ARCHIVE = "https://api.nytimes.com/svc/archive/v1/{YEAR}/{MONTH}.json?api-key={APIKEY}";
+        public const string API_URL_BOOKS_BESTSELLERLISTS = "https://api.nytimes.com/svc/books/v3/lists/names.json?api-key={APIKEY}";
+        public const string API_URL_BOOKS_ONLIST = "https://api.nytimes.com/svc/books/v3/lists/{DATE}/{LISTNAME}.json?api-key={APIKEY}";
+        public const string API_URL_REVIEWS_GETBY = "https://api.nytimes.com/svc/books/v3/reviews.json?{REVIEWBYTYPE}={REVIEWBYVALUE}&api-key={APIKEY}";
+
         #endregion
     }
 }
