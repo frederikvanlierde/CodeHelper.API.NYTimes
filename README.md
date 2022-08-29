@@ -8,6 +8,7 @@ CodeHelper.API.NYTimes is a lightweight and simple .NET Wrapper to get links and
 * NuGet <https://www.nuget.org/packages/CodeHelper.API.NYTimes>
 
 ## Version
+* 1.2.0 : Get Movie critic names, Get Crtics Picks, Search Movie Reviews
 * 1.1.0 : Get Best Seller Lists, Get Books on a specific list, Get NYT Book reviews by author¦isbn¦title
 * 1.0.0 : Get Sections, Get Latest Articles, Get Top Stories, Get Most Popular, Article Search, Article Archives 
 
@@ -22,7 +23,11 @@ CodeHelper.API.NYTimes is a lightweight and simple .NET Wrapper to get links and
 * NYTimesBooksHelper.GetBestSellerLists() : Returns a list of all the NYT Best Sellers Lists.
 * NYTimesBooksHelper.GetBookReviews(string reviewByType, string reviewByValue) : Returns a list NYT book review by author, ISBN, or title.
 
-## Use of Code 
+* NYTimesMoviesHelper.GetCriticNames() : Returns a list of movie critic names
+* NYTimesMoviesHelper.GetCriticsPicks() : Returns a list of movie reviews that are critics' picks
+* NYTimesMoviesHelper.Search(string query, string dateFrom, string dateTo) : Returns a list of movie reviews bases on words in the titke (query) 
+
+## Use of Code	
  ```csharp
 using CodeHelper.API.NYTimes;
 using CodeHelper.API.NYTimes.Articles;
@@ -30,10 +35,14 @@ using CodeHelper.API.NYTimes.Articles;
 NYTimesArticlesHelper _helper = new() { ApiKey = "YOUR_NYTIMES_API_TOKEN"" };
 var _articles = _helper.GetTopStories("arts");
 
-NYTimesBooksHelper _helper = new() { ApiKey = "YOUR_NYTIMES_API_TOKEN"" };
-var _lists = _helper.GetBestSellerLists();
-var _books = _helper.GetBooksOnList("hardcover-fiction");
-var _reviews = await _helper.GetBookReviews(ReviewByTypes.Author, "Stephen King");
+NYTimesBooksHelper _helperBooks = new() { ApiKey = "YOUR_NYTIMES_API_TOKEN"" };
+var _lists = await _helperBooks.GetBestSellerLists();
+var _books = await _helperBooks.GetBooksOnList("hardcover-fiction");
+var _reviews = await _helperBooks.GetBookReviews(ReviewByTypes.Author, "Stephen King");
+
+NYTimesMoviesHelper _helperMovies = new() { ApiKey = "YOUR_NYTIMES_API_TOKEN"" };
+var _critics = _helperMovies.GetCriticNames();
+
 ```
 
 ## Authentication

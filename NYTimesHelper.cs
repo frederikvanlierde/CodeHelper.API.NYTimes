@@ -1,7 +1,7 @@
 ﻿using CodeHelper.Core.PlaceHolder;
 using System.Net.Http;
 using System.Threading.Tasks;
-using CodeHelper.Core.PlaceHolder;
+
 
 namespace CodeHelper.API.NYTimes
 {
@@ -10,6 +10,7 @@ namespace CodeHelper.API.NYTimes
         #region Properties
         private readonly HttpClient _httpClient = new();
         [Placeholder("{APIKEY}")] public string ApiKey { get; set; } = "";
+        [Placeholder("{QUERY}")] public string SearchQuery { get; set; } = "";
         #endregion
 
         #region Constructors
